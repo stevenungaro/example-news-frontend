@@ -7,7 +7,7 @@ export function Content() {
 
   const handleIndexArticles = () => {
     console.log("handleIndexArticles");
-    axios.get("https://newsapi.org/v2/everything?q=tesla&apiKey=XXXX").then((response) => {
+    axios.get("http://localhost:3000/articles.json?search_terms=bitcoin").then((response) => {
       console.log(response.data);
       setArticles(response.data.articles);
     });
